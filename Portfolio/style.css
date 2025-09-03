@@ -1,0 +1,222 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #111, #222);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.highlight {
+  color: #00cc99;
+}
+
+.cursor {
+  display: inline-block;
+  color: #00cc99;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Navbar */
+nav {
+  margin-top: 20px;
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: #00cc99;
+}
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+h2 {
+  margin-bottom: 20px;
+  color: #00cc99;
+  text-align: center;
+}
+
+/* Skills */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+.skills-list li {
+  background: #00cc99;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.skills-list li:hover {
+  transform: scale(1.1);
+}
+
+/* Projects */
+.project-card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
+.social-icons {
+  margin-top: 10px;
+}
+.social-icons a {
+  color: #00cc99;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.social-icons a:hover {
+  color: white;
+}
+
+/* Scroll Button */
+#topBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  background: #00cc99;
+  border: none;
+  color: white;
+  padding: 12px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+#topBtn:hover {
+  background: #009977;
+}
+
+/* Scroll Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    padding: 20px;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    border-radius: 8px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+    color: white;
+    font-size: 24px;
+  }
+}
+
+/* Dark Mode Button */
+.dark-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #00cc99;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.dark-toggle:hover {
+  background: #009977;
+}
+
+/* Dark Mode Theme */
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+body.dark header {
+  background: linear-gradient(135deg, #000, #111);
+}
+body.dark .project-card {
+  background: #1e1e1e;
+  color: #ddd;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.05);
+}
+body.dark .skills-list li {
+  background: #009977;
+}
+body.dark footer {
+  background: #000;
+  color: #aaa;
+}
+body.dark .social-icons a {
+  color: #00cc99;
+}
+body.dark .nav-links {
+  background: #000;
+}
