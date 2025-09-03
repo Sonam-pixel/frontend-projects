@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+/* ===== Weather App Card ===== */
+.weather-app {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ===== Header ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header button {
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.header button:hover {
+  transform: scale(1.1);
+}
+
+/* ===== Search Box ===== */
+.search-box {
+  margin: 20px 0;
+}
+
+.search-box input {
+  padding: 10px;
+  width: 65%;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+.search-box input:focus {
+  border-color: #0984e3;
+}
+
+.search-box button {
+  padding: 10px 15px;
+  border: none;
+  background: #74b9ff;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px 3px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.search-box button:hover {
+  background: #0984e3;
+  transform: scale(1.05);
+}
+
+/* ===== Weather Result ===== */
+.weather-result {
+  margin-top: 15px;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* ===== Forecast Section ===== */
+.forecast {
+  margin-top: 20px;
+}
+
+.forecast-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.forecast-day {
+  background: #f1f2f6;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.forecast-day img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ===== Dark Mode ===== */
+body.dark {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+}
+
+body.dark .weather-app {
+  background: #2f3640;
+  color: #fff;
+}
+
+body.dark .search-box input {
+  background: #353b48;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark .forecast-day {
+  background: #3d3d3d;
+  color: #fff;
+}
