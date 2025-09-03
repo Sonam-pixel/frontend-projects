@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Blogging Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">📝 MiniBlog</div>
+      <div class="nav-actions">
+        <input type="text" id="search" placeholder="🔍 Search posts..." onkeyup="searchPosts()">
+        <button id="themeToggle">🌙 Dark Mode</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Blog Form Section -->
+    <section class="blog-form">
+      <h2>Create a New Post</h2>
+      <input type="text" id="title" placeholder="Enter post title">
+      <textarea id="content" rows="4" placeholder="Write your blog..."></textarea>
+      <button onclick="addPost()">Publish Post</button>
+    </section>
+
+    <!-- Blog Posts Section -->
+    <section id="posts-section">
+      <h2>Latest Posts</h2>
+      <div id="posts"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made with ❤️ by Sonam | Mini Blogging Platform © 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
